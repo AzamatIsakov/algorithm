@@ -1,0 +1,27 @@
+.cell {
+  width: 70px;
+  padding: 10px 0;
+  font: 26px sans-serif;
+  text-align: center;
+  box-shadow: 0 0 10px -5px black;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-color: aliceblue;
+  transition: all 0.3s ease;
+}
+
+.cell.selected {
+  /* border: 2px solid orangered; */
+  animation: blink infinite 0.6s alternate;
+}
+
+@keyframes blink {
+  from {
+    /* border-color: transparent; */
+    background-color: aliceblue;
+  }
+  to {
+    /* border-color: orangered; */
+    background-color: greenyellow;
+  }
+}

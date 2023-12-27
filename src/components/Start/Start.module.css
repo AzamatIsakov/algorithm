@@ -1,0 +1,43 @@
+.start_box {
+  margin-top: 150px;
+  text-align: center;
+}
+.start_title {
+  display: inline-block;
+  margin-right: 20px;
+  font: bold 32px sans-serif;
+  color: white;
+}
+.input {
+  width: 70px;
+  height: 45px;
+  padding: 10px 0 10px 14px;
+  font: 26px sans-serif;
+  text-align: center;
+  box-shadow: 0 0 10px -5px black;
+  border: 2px solid gainsboro;
+  border-radius: 10px;
+  outline: none;
+  background-color: aliceblue;
+  transition: all 0.3s ease;
+}
+.input:focus {
+  border-color: orangered;
+}
+.button {
+  margin-top: 30px;
+  padding: 15px 45px;
+  font: 26px sans-serif;
+  border: 2px solid gainsboro;
+  border-radius: 15px;
+  background-color: aliceblue;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: rgb(135, 195, 255);
+}
+
+.button:active {
+  background-color: orangered;
+}
