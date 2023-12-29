@@ -9,11 +9,10 @@ interface InputsProps {
 }
 
 const Inputs = ({ setNums, cellsAmount }: InputsProps) => {
-  const inputElemsArr: InputProps[] = [];
+  const inputElems: InputProps[] = [];
 
   const clickHandler = () => {
-    console.log(inputElemsArr);
-    setNums(inputElemsArr.map((elem) => +elem.current.value));
+    setNums(inputElems.map((elem) => +elem.current.value));
   };
 
   return (
@@ -27,7 +26,7 @@ const Inputs = ({ setNums, cellsAmount }: InputsProps) => {
           }
           return (
             <Input
-              inputElems={inputElemsArr}
+              inputElems={inputElems}
               autoFocused={focused}
               index={'input-' + index}
             />

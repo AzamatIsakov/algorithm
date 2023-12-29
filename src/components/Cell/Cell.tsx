@@ -4,15 +4,20 @@ import styles from './Cell.module.css';
 
 interface CellProps {
   value: number;
-  changed?: boolean;
+  status: 0 | 1 | 2 | 3 | 4;
   key: number | string;
 }
 
-const Cell = ({ value, changed = false, key }: CellProps) => {
+const Cell = ({ value, status = 0, key }: CellProps) => {
   return (
     <p
       key={key}
-      className={classNames(styles.cell, { [styles.selected]: changed })}
+      className={classNames(styles.cell, {
+        [styles.selected_1]: status === 1,
+        [styles.selected_2]: status === 2,
+        [styles.selected_3]: status === 3,
+        [styles.selected_4]: status === 4,
+      })}
     >
       {value}
     </p>

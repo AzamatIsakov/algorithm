@@ -6,22 +6,37 @@
   box-shadow: 0 0 10px -5px black;
   border: 2px solid transparent;
   border-radius: 10px;
-  background-color: aliceblue;
+  background-color: rgb(200, 200, 200);
   transition: all 0.3s ease;
 }
 
-.cell.selected {
+.cell.selected_1 {
+  background-color: rgb(255, 100, 100);
   /* border: 2px solid orangered; */
-  animation: blink infinite 0.6s alternate;
+  animation: blink infinite 0.6s;
+}
+
+.cell.selected_2 {
+  background-color: rgb(50, 255, 47);
+  /* border: 2px solid orangered; */
+  animation: blink infinite 0.6s;
+}
+
+.cell.selected_3 {
+  /* background-color: yellow; */
+  border: 2px solid yellow;
+  animation: blink infinite 0.6s;
+}
+
+.cell.selected_4 {
+  background-color: rgb(255, 100, 100);
+  border: 2px solid yellow;
+  animation: blink infinite 0.6s;
 }
 
 @keyframes blink {
-  from {
-    /* border-color: transparent; */
-    background-color: aliceblue;
-  }
-  to {
+  50% {
     /* border-color: orangered; */
-    background-color: greenyellow;
+    background-color: rgb(220, 220, 220);
   }
 }
