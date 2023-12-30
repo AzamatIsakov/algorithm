@@ -1,12 +1,6 @@
 import { useState } from 'react';
 
-import {
-  // Row,
-  // Input,
-  Inputs,
-  Sort,
-  Start,
-} from './components';
+import { Inputs, Sort, Start } from './components';
 
 import styles from './App.module.css';
 import btnStyles from './components/Inputs/Inputs.module.css';
@@ -15,7 +9,6 @@ const App = () => {
   const [appState, setAppState] = useState('start');
   const [cellsAmount, setCellsAmount] = useState(2);
   const [nums, setNums] = useState<number[]>([]);
-  // const numsArr = [4, 2, 5, 67, 5, 3, 65, 45, 11, 12, 53, 54];
   console.log(nums);
 
   if (appState === 'start') {
