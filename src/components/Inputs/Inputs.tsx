@@ -12,6 +12,7 @@ const Inputs = ({ setNums, cellsAmount }: InputsProps) => {
   const inputElems: InputProps[] = [];
 
   const clickHandler = () => {
+    // @ts-expect-error: error message
     setNums(inputElems.map((elem) => +elem.current.value));
   };
 

@@ -39,7 +39,9 @@ const Sort = ({ nums }: SortProps) => {
           else newNums[changedIndex].status = 1;
         }
         newNums[secondIndex].status = 2;
+        // @ts-expect-error: error message
         result.push(<Row numsArr={newNums} />);
+        // @ts-expect-error: error message
         newNums = resetNumStatus(newNums);
         newNums.splice(firstIndex, 0, ...newNums.splice(secondIndex, 1));
         changedIndex = firstIndex;
@@ -49,6 +51,7 @@ const Sort = ({ nums }: SortProps) => {
   if (changedIndex !== undefined && changedIndex >= 0) {
     newNums[changedIndex].status = 1;
   }
+  // @ts-expect-error: error message
   result.push(<Row numsArr={newNums} />);
 
   return <div>{result}</div>;

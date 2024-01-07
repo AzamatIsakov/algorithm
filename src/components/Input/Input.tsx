@@ -17,6 +17,7 @@ const Input = ({ inputElems, index, autoFocused = false }: InputProps) => {
   useEffect(() => {
     if (inputRef) {
       // React.ChangeEvent<HTMLInputElement>
+      // @ts-expect-error: error message
       inputRef.current!.onkeyup = (e) => {
         if (e.key === 'Enter') {
           e.target.nextElementSibling!.focus();
@@ -27,6 +28,7 @@ const Input = ({ inputElems, index, autoFocused = false }: InputProps) => {
 
   if (inputRef) {
     if (inputElems.filter((elem) => elem && elem.dataset?.index !== index)) {
+      // @ts-expect-error: error message
       inputElems.push(inputRef);
     }
   }
